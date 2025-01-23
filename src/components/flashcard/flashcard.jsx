@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import './flashcard.css';
+
 function Flashcard({ card }) {
     //Track a flipped and unflipped state of the card
     const [flipped, setFlipped] = useState(false);
@@ -12,6 +14,6 @@ function Flashcard({ card }) {
     // content of button/card: Question
     // flipped ? card.answer : card.question
     // props: card
-    return <button onClick={handleFlip}>{flipped ? card.answer : card.question} </button>
+    return <button onClick={handleFlip} className='flashcard'>{flipped ? card.answer : card.question} </button>
 }
 export default Flashcard;
