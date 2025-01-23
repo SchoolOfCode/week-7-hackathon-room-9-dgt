@@ -5,34 +5,34 @@ import { useState } from "react";
 function Flashcards() {
     const [cards, setCards] = useState([
         {
-            question: "What colour is a carrot?",
-            answer: "Orange",
+            question: "What is a component?",
+            answer: "A component is a reusable, independent piece of UI in React",
             id: 1,
         },
         {
-            question: "What colour is a banana?",
-            answer: "Yellow",
+            question: "What does state mean?",
+            answer: "State is an object that holds dynamic data that changes over time and triggers UI updates.",
             id: 2,
         },
         {
-            question: "What colour is the moon?",
-            answer: "Silver",
-            id: 2,
+            question: "Why do React components start with a capital letter?",
+            answer: "React uses uppercase names to distinguish components from regular HTML tags.",
+            id: 3,
         },
         {
-            question: "What colour is a red car?",
-            answer: "Red",
-            id: 2,
+            question: "Describe what props mean?",
+            answer: "Props are inputs passed to components to configure them and make them reusable.",
+            id: 4,
         },
         {
-            question: "What colour is a purple grape?",
-            answer: "Purple",
-            id: 2,
+            question: "How do you create and nest components?",
+            answer: "Create components as functions or classes, and nest them by including one component inside another.",
+            id: 5,
         },
         {
-            question: "What colour is a tiger?",
-            answer: "Orange & Black",
-            id: 2,
+            question: "How do you add markup and styles?",
+            answer: "Add markup with JSX and styles using inline styles, CSS classes, or CSS modules.",
+            id: 6,
         },
     ]);
 
