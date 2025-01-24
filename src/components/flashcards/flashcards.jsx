@@ -40,7 +40,8 @@ function Flashcards() {
 
     return (
         <>
-            <Flashcard
+        {cards.map((item, i) => (<Flashcard card={item} key={i}/ >))}
+            {/* <Flashcard
                 card={
                     cards[0]
 
@@ -75,11 +76,18 @@ function Flashcards() {
                     cards[5]
 
                 }
-            />
+            /> */}
         </>
     );
 }
 
 export default Flashcards;
 
-//const flashcardQuestions =
+
+
+
+//we think we want to use .map() which creates a new array of elements, it does not change the original array
+//cards is our array
+//for each card in the array we want to create a flashcard component
+//we want to give each flashcard a key and a card as a prop that passes the card information to the Flashcard component
+//we want to render one Flashcard component for every item in the array
