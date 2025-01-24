@@ -1,5 +1,6 @@
 import Flashcard from "../flashcard/flashcard";
 import { useState } from "react";
+import './flashcards.css'
 
 
 function Flashcards() {
@@ -39,9 +40,24 @@ function Flashcards() {
     console.log("i'm here");
 
     return (
-        <>
-        {cards.map((item, i) => (<Flashcard card={item} key={i}/ >))}
-            {/* <Flashcard
+        <div className="flashcard-container">
+            {cards.map((item, i) => (<Flashcard card={item} key={i} />))}
+
+        </div >
+
+    )
+}
+export default Flashcards;
+
+
+
+
+//we think we want to use .map() which creates a new array of elements, it does not change the original array
+//cards is our array
+//for each card in the array we want to create a flashcard component
+//we want to give each flashcard a key and a card as a prop that passes the card information to the Flashcard component
+//we want to render one Flashcard component for every item in the array
+{/* <Flashcard
                 card={
                     cards[0]
 
@@ -77,17 +93,3 @@ function Flashcards() {
 
                 }
             /> */}
-        </>
-    );
-}
-
-export default Flashcards;
-
-
-
-
-//we think we want to use .map() which creates a new array of elements, it does not change the original array
-//cards is our array
-//for each card in the array we want to create a flashcard component
-//we want to give each flashcard a key and a card as a prop that passes the card information to the Flashcard component
-//we want to render one Flashcard component for every item in the array
